@@ -1,0 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Courgette", cursive;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.452);
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  left: 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 992px;
+}
+
+.nav-menu-link {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  color: #eabe3f;
+  transition: all 0.5s ease-out;
+}
+
+.nav-menu-item {
+  list-style: none;
+  font-size: 15px;
+  margin: 0 15px;
+  line-height: 90px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-img {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 50px;
+  left: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+}
+
+.nav-toggle {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer;
+  display: none;
+}
+.nav-toggle:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (min-width: 375px) {
+  html {
+    background-color: rgb(230, 170, 150);
+  }
+
+  body {
+    font-family: "Courgette", cursive;
+  }
+
+  .header {
+    height: 60px;
+    background-color: #000000c2;
+  }
+  .header-nav {
+    height: 50px;
+  }
+  .nav-img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: -40px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #000000c2;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    overflow-y: auto;
+    left: 100%;
+    transition: left 0.8s;
+  }
+
+  .nav-menu-item {
+    line-height: 50px;
+  }
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: #eabe3f;
+    transition: all 0.5s ease;
+  }
+  .nav-toggle {
+    display: block;
+    height: 60px;
+    cursor: pointer;
+  }
+  .nav-menu_visible {
+    left: 0;
+  }
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+  .container-title-button:hover {
+    background-color: #eabe3f;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+
+  /* seccion tituto */
+  .title {
+    background-image: url(../image/fondo1024.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 370px;
+
+    width: 100%;
+    z-index: -2;
+  }
+  .container-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 90px;
+    background-color: rgba(0, 0, 0, 0.568);
+    height: 250px;
+    border-radius: 10px;
+    width: 89%;
+    left: 20px;
+  }
+  .container-title-h1 {
+    color: #eabe3f;
+    font-size: 45px;
+    position: relative;
+    bottom: 20px;
+    right: 40px;
+  }
+  .container-title-h2 {
+    color: #eabe3f;
+    font-size: 45px;
+    position: relative;
+    bottom: 25px;
+    left: 40px;
+  }
+
+  .container-title-p {
+    color: #eabe3f;
+    font-size: 22px;
+    position: relative;
+    bottom: 10px;
+  }
+
+  .container-title-button {
+    font-family: "Courgette", cursive;
+    background-color: #eabe3f;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+  }
+  .container-title-button::hover {
+    color: #fff;
+    transition: all 0.5s ease;
+  }
+
+  /* SECCION UÑAS */
+  .container-uñas {
+    position: relative;
+    top: 400px;
+    width: 89%;
+    left: 20px;
+    z-index: -1;
+  }
+
+  .container-uñas-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #000000c2;
+    height: 50px;
+    border-radius: 10px;
+    z-index: -1;
+    margin-bottom: 15px;
+  }
+  .container-uñas-h2 {
+    color: #eabe3f;
+    font-size: 22px;
+  }
+
+  /* TIPOS DE UÑAS */
+  .container-uñas {
+    display: block;
+    position: relative;
+    top: 400px;
+    z-index: -1;
+  }
+  .container-uñas-cards {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: #000000c2;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card-img {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    height: 150px;
+  }
+  .card-img2 {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    height: 135px;
+  }
+  .card-img3 {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 110px;
+  }
+  .card-img4 {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    height: 95px;
+  }
+  .card-inf {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15px;
+  }
+  .card-inf-h2 {
+    color: #eabe3f;
+    font-size: 20px;
+    position: relative;
+  }
+  .card-inf-p {
+    color: #fff;
+    font-size: 13px;
+    width: 150px;
+    position: relative;
+    top: 5px;
+  }
+
+  /* UBICACION */
+  .container-ubicacion {
+    position: relative;
+    top: 400px;
+    width: 89%;
+    left: 20px;
+    z-index: -1;
+  }
+
+  .container-ubicacion-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #000000c2;
+    height: 50px;
+    border-radius: 10px;
+    z-index: -1;
+    margin-bottom: 15px;
+  }
+  .container-ubicacion-h2 {
+    color: #eabe3f;
+    font-size: 22px;
+  }
+  .ubicacion-local {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid #eabe3f;
+    z-index: -1;
+  }
+  .fachadasalon {
+    width: 330px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    top: 420px;
+    width: 89%;
+    left: 20px;
+    z-index: -1;
+    background-color: rgb(29, 27, 27);
+    height: 120px;
+    border-radius: 10px;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    color: #eabe3f;
+  }
+  .footer-social-title-h2 {
+    font-size: 28px;
+    position: relative;
+    bottom: 25px;
+  }
+  .footer-social-icon {
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    bottom: 15px;
+  }
+  .icon {
+    color: #eabe3f;
+  }
+}
+
+@media (min-width: 425px) {
+  .fachadasalon {
+    width: 380px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+  }
+}
+@media (min-width: 768px) {
+  .container-title {
+    position: relative;
+    left: 40px;
+  }
+  .container-uñas {
+    position: relative;
+    left: 40px;
+  }
+  .container-ubicacion {
+    position: relative;
+    left: 40px;
+  }
+  footer {
+    position: relative;
+    left: 40px;
+  }
+  .container-title-h1 {
+    font-size: 60px;
+    position: relative;
+    right: 100px;
+    bottom: 10px;
+  }
+  .container-title-button {
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -3px;
+  }
+  .container-title-h2 {
+    font-size: 60px;
+    position: relative;
+    left: 100px;
+    bottom: 20px;
+  }
+
+  .card-img-all {
+    position: relative;
+    left: 30px;
+    height: 200px;
+  }
+  .card-img3 {
+    height: 160px;
+  }
+  .card-img4 {
+    height: 135px;
+  }
+  .card-inf {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    left: 70px;
+  }
+  .container-uñas-cards .card-inf .card-inf-p {
+    width: 300px;
+  }
+  .fachadasalon {
+    width: 530px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+    left: 70px;
+  }
+
+  footer {
+    height: 140px;
+  }
+  .footer-social-title-h2 {
+    font-size: 40px;
+  }
+  .footer-social-icon {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    background-image: url(../image/fondo1024.jpg);
+    height: 395px;
+  }
+  .container-uñas-cards-all {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container-uñas-cards {
+    width: 45%;
+    margin-right: 10px;
+    left: 35px;
+  }
+  .card .card-img-all {
+    height: 100px;
+    position: relative;
+    left: -5px;
+  }
+  .card-img3 {
+    height: 130px;
+    position: relative;
+  }
+  .card-img4 {
+    height: 130px;
+    position: relative;
+  }
+  .card-inf {
+    position: relative;
+    left: 10px;
+  }
+  .card-inf-h2 {
+    position: relative;
+    text-align: left;
+  }
+  .card-inf-p {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+    font-size: 12px;
+  }
+  .container-uñas-cards .card-inf .card-inf-p {
+    width: 130px;
+  }
+  .nav-toggle {
+    display: none;
+  }
+
+  .header .nav-menu {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    justify-content: flex-end;
+    position: relative;
+    top: 10px;
+    overflow-y: hidden;
+  }
+
+  .nav-menu .nav-menu-item {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .ubicacion {
+    width: 450px;
+  }
+  .fachadasalon {
+    width: 440px;
+    height: 200px;
+    float: right;
+    position: relative;
+    bottom: 214px;
+    left: -5px;
+    border-radius: 10px;
+  }
+
+  .footer-social-title-h2,
+  .footer-social-icon {
+    left: 220px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .title {
+    background-image: url(../image/fondo1024.jpg);
+    height: 395px;
+  }
+  .nav-menu {
+    position: relative;
+    left: 170px;
+  }
+  .container-title {
+    width: 1000px;
+    position: relative;
+    left: 170px;
+  }
+  .container-uñas-cards {
+    position: relative;
+    left: 90px;
+  }
+  .container-uñas-title {
+    width: 1000px;
+    position: relative;
+    left: 130px;
+  }
+  .container-ubicacion-title {
+    width: 1000px;
+    position: relative;
+    left: 130px;
+  }
+
+  .ubicacion {
+    width: 500px;
+    position: relative;
+    left: 110px;
+  }
+  .fachadasalon {
+    width: 500px;
+    height: 200px;
+    float: right;
+    position: relative;
+    bottom: 213px;
+    border-radius: 10px;
+    left: -50px;
+  }
+  .container-uñas-cards .card-inf .card-inf-p {
+    width: 250px;
+  }
+  footer {
+    left: 70px;
+  }
+}
+@media (min-width: 1440px) {
+  .title {
+    background-image: url(../image/fondo1024.jpg);
+    height: 395px;
+  }
+  .nav-menu {
+    position: relative;
+    left: 170px;
+  }
+  .container-title {
+    width: 1000px;
+    position: relative;
+    left: 200px;
+    bottom: 30px;
+  }
+  .container-uñas-cards {
+    position: relative;
+    left: 90px;
+  }
+  .container-uñas-title {
+    width: 800px;
+    position: relative;
+    left: 290px;
+  }
+  .container-ubicacion-title {
+    width: 800px;
+    position: relative;
+    left: 290px;
+  }
+
+  .ubicacion {
+    width: 500px;
+    position: relative;
+    left: 180px;
+  }
+  .fachadasalon {
+    width: 500px;
+    height: 200px;
+    float: right;
+    position: relative;
+    bottom: 213px;
+    left: -80px;
+    border-radius: 10px;
+  }
+  .container-uñas-cards .card-inf .card-inf-p {
+    width: 250px;
+  }
+}
